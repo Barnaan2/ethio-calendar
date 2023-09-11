@@ -6,11 +6,10 @@
   "license":"MIT license",
   "author":{
       "name":["Bernabas Tekkalign Buli","Abel Kinfu Girma"],
-      "email":"barnaantekalign@gmail.com",
-      "url":"https://ethiocalendar.com"
+      "email":"barnaantekalign@gmail.com"
+     
 
   },
-  "main":"src/index.js",
   "repository":{
       "type":"git",
       "url":"https://github.com/barnaan2/ethio-calendar.git"
