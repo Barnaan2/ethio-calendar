@@ -3,12 +3,10 @@
   "version": "1.0.0",
   "description":"A date converter from Gregorian calendar to Ethiopian calendar with additional functionalities like  months in different local languages ",
   "keywords":["Ethiopian-calendar","Ethiopian Date","Habesha Date ","Oromo calendar","Oromo Date","Geez calendar","Geez Date"],
-  "license":"MIT license",
-  "author":{
-      "name":["Bernabas Tekkalign Buli","Abel Kinfu Girma"],
-      "email":"barnaantekalign@gmail.com"
-     
-
+  "license":"MIT",
+  "author": {
+    "name": "Bernabas Tekkalign Buli",
+    "email": "barnaantekalign@gmail.com"
   },
   "repository":{
       "type":"git",
