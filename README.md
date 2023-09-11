@@ -1,4 +1,4 @@
-# EthioDate Class Documentation
+# ethio-calendar Documentation
 
 The `EthioDate` class in the "ethio-calendar" package represents a new type of date object in the Ethiopian calendar and provides methods for humanizing it. Users can interact with this class to work with dates in the Ethiopian calendar.
 
