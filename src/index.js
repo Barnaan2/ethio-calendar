@@ -10,11 +10,9 @@ const EthioDate = require('./ethioDate')
  */
 
 
-// const date = new EthioDate({
-//     lang:"Am"
-// });
+
 let dates = new Date("2023-09-12")
-const date = new EthioDate('Am',dates);
+const date = new EthioDate('amh',dates);
 // console.log(date.humanizedDate());
 const wow = date.now();
 console.log(` here i am ${wow.month}`);

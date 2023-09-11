@@ -10,7 +10,7 @@ const isLeap = require('./../src/utility/leapYear');
 
 describe('EthioCalendar', () => {
     let dates = new Date("2023-09-12")
-    const ethioDate = new EthioDate("Am",dates );
+    const ethioDate = new EthioDate("amh",dates );
     const currentDate = ethioDate.now();
 
     it('Should correctly calculate the Ethiopian year for a Gregorian date',()=>{
