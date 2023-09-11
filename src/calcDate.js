@@ -3,17 +3,38 @@ const isLeap = require('./utility/leapYear');
 const CustomDate = require('./customDate');
 const EthiopianCalendar = require('./ethioCalendar')
 
+/**
+ * A module for converting between the Ethiopian and Gregorian calendars.
+ *
+ * @module ethio-calendar
+ */
+
+/**
+ * Class calculating the Ethiopian calendar.
+ */
+
 class CalculateDate {
     constructor(date){
         // date to be converted to Ethiopian calender
+        // if (!Number.isInteger(month) || !Number.isInteger(year)) {
+        //     throw new Error('Invalid input: Month and year must be integers.');
+        //   }
         this.date = date;
         this.isLeap = isLeap.isLeapYear(this.date.getFullYear())
         this.customDate = new CustomDate();
         this.ethiopianDate = new EthiopianCalendar();
-        // Number of days in Ethiopian month.
+        // Number of days in  12 Ethiopian month Except for the 13th month.
         this.DAY_IN_ETHIO_MONTH = 30
     }
+    
 
+    /**
+   * Determine if a year is a leap year.
+   * @returns {EthiopianCalendar} object of EthiopainCalendar.
+   * @example
+   * const ethioCalendar = new CalculateDate(new Date.now())
+   * const date = ethioCalendar.calculate();
+   */
 calculate(){
 this._gregNewYear();
 this._ethioNewYear();

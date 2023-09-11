@@ -1,9 +1,24 @@
 const EthioDate = require('./ethioDate')
+/**
+ * A module for converting between the Ethiopian and Gregorian calendars.
+ *
+ * @module ethio-calendar
+ */
 
-const date = new EthioDate({
-    lang:"Am"
-});
+/**
+ * File representing  the users using the package.
+ */
+
+
+// const date = new EthioDate({
+//     lang:"Am"
+// });
+let dates = new Date("2023-09-12")
+const date = new EthioDate('Am',dates);
+// console.log(date.humanizedDate());
+const wow = date.now();
+console.log(` here i am ${wow.month}`);
 
 // Unknown error it says that date.lang() is not a function .
-console.log(date.now());
-console.log(date.humanizedDate());
+// console.log(date.now());
+// console.log(date.humanizedDate());
