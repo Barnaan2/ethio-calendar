@@ -83,7 +83,7 @@ else if(yearDiff === 7){
     // we have to use  to check the leapness of the next year if 
     // the year difference is lessthan 8 or if its 7.
     let tempYear = year + 1;
-    sepDate = isLeap(tempYear) ? leapSep : notLeapSep;
+    sepDate = isLeap.isLeapYear(tempYear) ? leapSep : notLeapSep;
 }
 
 this.customDate.day = sepDate;

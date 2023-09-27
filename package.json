@@ -1,8 +1,9 @@
-{
+﻿{
   "name":"eth-calendar",
   "version": "1.0.0",
   "description":"A date converter from Gregorian calendar to Ethiopian calendar with additional functionalities like  months in different local languages ",
-  "keywords":["Ethiopian-calendar","Ethiopian Date","Habesha Date ","Oromo calendar","Oromo Date","Geez calendar","Geez Date"],
+  "main": "ethioDate.js",
+"keywords":["Ethiopian-calendar","Ethiopian Date","Habesha Date ","Oromo calendar","Oromo Date","Geez calendar","Geez Date"],
   "license":"MIT",
   "author": {
     "name": "Bernabas Tekkalign Buli",
