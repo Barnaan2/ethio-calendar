@@ -1,54 +1,121 @@
-# ethio-calendar Documentation
 
-The `EthioDate` class in the "ethio-calendar" package represents a new type of date object in the Ethiopian calendar and provides methods for humanizing it. Users can interact with this class to work with dates in the Ethiopian calendar.
+# Ethiopian Calendar
+A date converter from Gregorian calendar to Ethiopian calendar with additional functionalities such as  months in different local languages.
+
 
 ## Installation
 
-To use the "ethio-calendar" package and the `EthioDate` class, install it using npm:
+Install Ethiopian calendar package with npm
 
-```shell
-npm install ethio-calendar
+```bash
+  npm install eth-calendar
+```
+    
+## Usage
+
+
+Provide examples and explanations to help users understand how to use your package effectively. Consider different scenarios and use cases.
+
+### Getting Started
+
+To get started with Ethiopian Calendar, you'll need to install it first. If you haven't already, follow the installation instructions in the [Installation](#installation) section.
+
+### Basic Usage
+
+Here's a simple example of how to use Ethiopian Calendar in your JavaScript code:
+
+```javascript
+const EthioDate = require('eth-calendar');
+
+const date = new Date("2023-10-24")
+const ethioDate = new EthioDate('amh',dates);
+console.log(date.humanizedDate());
+<!-- this will return a string  look like this :
+ጥቅምት 13 2016
+-->
+
+// Your code here
 ```
 
-Usage
-Import the EthioDate class into your
+## API Reference
 
-const EthioDate = require('ethio-calendar');
+#### EthioDate class methods.
 
-Creating an Instance
+#### humanizedDate()
 
-To create an instance of the EthioDate class, specify the desired language code and an optional Gregorian date (defaulting to the current date):
+called in instance of EthioDate object. it returns string with humanized version . a month name with choosen language.
 
-// Create an instance with the default language (Amharic) and the current date
-const ethioDate = new EthioDate();
+``` 
+<!-- it will return a date string like this . (here the language is 'amh') -->
+ጥቅምት 13 2016
+ ```
 
-// Create an instance with a specific language code (e.g., Afaan Oromo) and a custom date
-const ethioDateOromo = new EthioDate('oro', new Date(2023, 8, 11)); // September 11, 2023
+## now()
+ Get the current Ethiopian date.
+```
+const EthioDate = require('eth-calendar');
+const date = new EthioDate();
+console.log(date.now()); 
+<!-- it will return an EthioDate object like this:
+EthiopianCalendar { day: 11, month: 2, year: 2016 } -->
+```
+## getMonth()
+Get the Ethiopian month (as an integer).
 
-Supported Languages
+## getDay()
+Get the Ethiopian day of the month (as an integer).
 
-The EthioDate class supports the following languages:
+## Supported Languages for Month Translation
 
-    "amh" for Amharic
-    "oro" for Afaan Oromo
-    "tig" for Tigrigna
+Ethiopian Calendar supports the translation of months into various Ethiopain languages. You can contribute by translating the months into your preferred language. Here is a list of the currently supported languages:
 
-You can specify the language when creating an instance of the class.
-Getting Date Information
+- Amaharic (amh)
+- Afaan Oromo (oro)
+- Tigrigna (tig)
 
-You can retrieve various date-related information using the following methods:
+## Usage of local Languages
+to use the local language pass it as parameter in the class of EthioDate while creating the object of it. pass the code name of the language.
+```
+// it would be 'oro' for afaan oromo and so on.
+const ethioDate = new EthioDate('amh',dates);
+```
 
-    now(): Get the current Ethiopian date.
-    getMonth(): Get the Ethiopian month (as an integer).
-    getDay(): Get the Ethiopian day of the month (as an integer).
+### How to Contribute a Translation
 
-Humanized Date
+If you'd like to contribute a translation for your language, follow these steps:
 
-The humanizedDate() method returns a human-readable representation of the Ethiopian date in the format "Month Day Year." For example:
+1. Fork the repository.
+2. Create a new file in the `translations` directory with a name that corresponds to your language code (e.g., `translations/som.json` for somali).
+3. Add the translated month names to the file in the following format:
+   ```
+        "amh": {
+          "fullLength": [
+            "መስከረም", "ጥቅምት", "ህዳር", "ታኅሣሥ", "ጥር",
+            "የካቲት", "መጋቢት", "ሚያዝያ", "ግንቦት", "ሰኔ",
+            "ኃምሌ", "ነሐሴ", "ጳጉሜ"
+          ],
+          "shorter": [
+            "መስከ", "ጥቅም", "ህዳር", "ታኅሣ", "ጥር",
+            "የካቲ", "መጋቢ", "ሚያዝ", "ግንቦ", "ሰኔ",
+            "ኃምሌ", "ነሐሴ", "ጳጉሜ"
+          ]
+        }
+        
+        ```
+  
 
-const date = ethioDate.humanizedDate();
-console.log(date); // Output: "መስከረም 1 2016" (assuming current date)
+## License
 
-Error Handling
+[MIT](https://choosealicense.com/licenses/mit/)
 
-The EthioDate class includes error handling for language codes and date calculations. It ensures that the provided language code is valid.
+## 🚀 About Me
+
+I'm Bernabas TekKalign, a passionate software engineer with over 3 years of experience. My journey in the world of software development has been an exciting adventure of learning, creating, and innovating. I'm dedicated to building robust and efficient software solutions that make a real impact.
+
+🔗 Explore more of my work on [GitHub](https://github.com/Barnaan2)
+
+🌐 Connect with me on [LinkedIn](https://www.linkedin.com/in/bernabas-tekkalign-4b1116232/)
+
+📝 Read my tech articles on [Medium](https://medium.com/@barnaantekalign)
+
+
