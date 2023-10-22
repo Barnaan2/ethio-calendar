@@ -14,7 +14,7 @@ Install Ethiopian calendar package with npm
 ## Usage
 
 
-Provide examples and explanations to help users understand how to use your package effectively. Consider different scenarios and use cases.
+Provided examples and explanations to help users understand how to use Ethiopian Calendar package effectively. different scenarios and use cases are mentioned.
 
 ### Getting Started
 
